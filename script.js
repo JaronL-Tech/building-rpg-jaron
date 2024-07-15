@@ -15,13 +15,24 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
-const location = [];
-
-// initialize buttons
-button1.onclick = goStore;
-button2.onclick = goCave;
-button3.onclick = fightDragon;
-
+const weapons = [
+  {
+    name: "stick",
+    power: 5,
+  },
+  {
+    name: "dagger",
+    power: 30,
+  },
+  {
+    name: "claw hammer",
+    power: 50,
+  },
+  {
+    name: "sword",
+    power: 100,
+  },
+];
 const locations = [
   {
     name: "town square",
@@ -47,6 +58,11 @@ const locations = [
     text: "You enter the cave. You see some monsters.",
   },
 ];
+
+// initialize buttons
+button1.onclick = goStore;
+button2.onclick = goCave;
+button3.onclick = fightDragon;
 
 function update(location) {
   {
