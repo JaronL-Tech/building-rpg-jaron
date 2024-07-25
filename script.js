@@ -80,6 +80,7 @@ const locations = [
       fightSlime,
       fightGhost,
       fightBeast,
+      fightLighteningSnake,
       fightSnake,
       goTown,
     ],
