@@ -30,6 +30,11 @@ const monsters = [
     health: 15,
   },
   {
+    name: "Ghost",
+    level: 5,
+    health: 30,
+  },
+  {
     name: "fanged beast",
     level: 8,
     health: 60,
@@ -66,11 +71,18 @@ const locations = [
     name: "cave",
     "button text": [
       "Fight slime",
+      "Fight ghost",
       "Fight fanged beast",
       "Fight lightening snake",
       "Go to town square",
     ],
-    "button functions": [fightSlime, fightBeast, fightSnake, goTown],
+    "button functions": [
+      fightSlime,
+      fightGhost,
+      fightBeast,
+      fightSnake,
+      goTown,
+    ],
     text: "You enter the cave. You see some monsters.",
   },
   {
@@ -180,17 +192,21 @@ function fightSlime() {
   fighting = 0;
   goFight();
 }
-
-function fightBeast() {
+function fightGhost() {
   fighting = 1;
   goFight();
 }
-function fightSnake() {
+
+function fightBeast() {
   fighting = 2;
   goFight();
 }
-function fightDragon() {
+function fightSnake() {
   fighting = 3;
+  goFight();
+}
+function fightDragon() {
+  fighting = 4;
   goFight();
 }
 
